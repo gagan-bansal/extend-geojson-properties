@@ -1,0 +1,29 @@
+{
+  "name": "extend-geojson-properties",
+  "version": "0.0.0",
+  "description": "Extend properties of geojson objects from separate dataset of jsons.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "keywords": [
+    "geojson",
+    "attributes",
+    "join",
+    "extend",
+    "maps"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gagan-bansal/extend-geojson-properties"
+  },
+  "author": "Gagan Bansal <gaganbansal123@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "~1.17.1",
+    "chai": "^1.9.1"
+  }
+}
