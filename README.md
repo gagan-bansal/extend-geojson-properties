@@ -32,11 +32,12 @@ var joinMap = {
   propertyMap:[  // array of mapping among the  items that need to be extend 
                  // to geojson as properties
     {
-      geoProperty:  // output geojson will have property key by 'prop1' name 
-      dataProperty:'attr2'
-        // json key (in this case key name 'attr2')
-        // that need to be extended to geojson 
-    }, {
+      geoProperty: 'prop1' // output geojson will have property by 'prop1' name 
+      dataProperty:'attr2' // json property that need to be extended to geojson 
+        // in this case property name 'attr2'    
+    }, 
+    //many more rules can be added
+    {
       geoProperty: ,
       dataProperty: 
     },  
@@ -86,7 +87,7 @@ Dataset containing the attributes that we want to extend to geojsons:
 Joining rules or joinMap: 
 ```javascript
     var joinMap = {
-      geoKey:'properties.name',
+      geoKey:'properties.name', //here geoKey can be feature 'id' also 
       dataKey: 'attr1',
       propertyMap:[{
           geoProperty: 'prop1',
@@ -100,11 +101,11 @@ Joining rules or joinMap:
         }]
     };
 ```
-usaging function is very simple once we have set properly the joinMap:
+Once we have set properly the joinMap the function is very simple :
 ```javascript 
 extentGeoJSON(geojsons,dataSet,joinMap);
 ```
-Now geojsons would have the extended properties:
+Now geojsons contains the extended properties:
 ```jsvascript 
     [{
       type:'Feature',
