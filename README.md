@@ -33,7 +33,7 @@ var joinMap = {
                  // to geojson as properties
     {
       geoProperty: 'prop1' // output geojson will have property by 'prop1' name 
-      dataProperty:'attr2' // json property that need to be extended to geojson 
+      dataProperty:'attr2' // json property that needs to be extended to geojson 
         // in this case property name 'attr2'    
     }, 
     //many more rules can be added
