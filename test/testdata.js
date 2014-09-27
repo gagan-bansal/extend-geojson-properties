@@ -56,6 +56,11 @@
         attr1: 'name3',
         attr2: 'val3-2',
         attr3: {field : 'val3-3',count:105}
+      },
+      {
+        attr1: 'name4',
+        attr2: 'val4-2',
+        attr3: {field : 'val4-3',count:105}
       }
     ],
     extendedGeojsons: [

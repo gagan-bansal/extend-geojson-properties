@@ -1,13 +1,13 @@
 {
   "name": "extend-geojson-properties",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Extende properties/attributes of geojson objects from separate dataset of jsons.",
   "main": "index.js",
   "directories": {
     "test": "test"
   },
   "scripts": {
-    "test": "mocha"
+    "test": "mocha test/test.js"
   },
   "keywords": [
     "geojson",

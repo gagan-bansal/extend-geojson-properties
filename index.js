@@ -9,9 +9,11 @@
     jsonDataSet.forEach(function(data) {
       var key = valueAt(data,jsonMap.dataKey);
       var feat = geoFeatIndex[key];
-      jsonMap.propertyMap.forEach(function(pair) {
-        feat.properties[pair.geoProperty] = valueAt(data,pair.dataProperty);
-      });
+      if (feat) {
+        jsonMap.propertyMap.forEach(function(pair) {
+          feat.properties[pair.geoProperty] = valueAt(data,pair.dataProperty);
+        });
+      }
     });
   };
   function valueAt(obj,path) {
