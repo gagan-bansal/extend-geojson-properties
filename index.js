@@ -10,9 +10,19 @@
       var key = valueAt(data,jsonMap.dataKey);
       var feat = geoFeatIndex[key];
       if (feat) {
-        jsonMap.propertyMap.forEach(function(pair) {
-          feat.properties[pair.geoProperty] = valueAt(data,pair.dataProperty);
-        });
+        if(jsonMap.propertyMap) {
+          jsonMap.propertyMap.forEach(function(pair) {
+            feat.properties[pair.geoProperty] = valueAt(data,pair.dataProperty);
+          });
+        } else {
+          // extend all properties of data to feature excepts dataKey
+          Object.keys(data).filter(function(key) {
+            return key !== jsonMap.dataKey;
+          })
+          .forEach(function(key) {
+            feat.properties[key] = data[key];
+          });
+        }
       }
     });
   };

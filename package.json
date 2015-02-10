@@ -1,6 +1,6 @@
 {
   "name": "extend-geojson-properties",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "Extende properties/attributes of geojson objects from separate dataset of jsons.",
   "main": "index.js",
   "directories": {
@@ -23,7 +23,8 @@
   "author": "Gagan Bansal <gaganbansal123@gmail.com>",
   "license": "MIT",
   "devDependencies": {
-    "mocha": "~1.17.1",
-    "chai": "^1.9.1"
+    "chai": "^1.9.1",
+    "clone": "^0.2.0",
+    "mocha": "~1.17.1"
   }
 }
