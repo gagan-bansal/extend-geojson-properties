@@ -1,6 +1,6 @@
 {
   "name": "extend-geojson-properties",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Extende properties/attributes of geojson (array of features or FeatureCollction) from separate dataset of jsons.",
   "main": "index.js",
   "directories": {

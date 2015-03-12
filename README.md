@@ -19,7 +19,7 @@ This module return a function or create global function named **extendGeoJSON** 
 var extendGeoJSON = require('extend-geojson-properties');
 extentGeoJSON( geojsons, dataSet, joinMap);
 ```
-* **geojsons** array of features of FeatureCollection
+* **geojsons** array of features or FeatureCollection
 * **dataSet** array of json objects from which properties need to be picked
 * **joinMap** joining rules
 
