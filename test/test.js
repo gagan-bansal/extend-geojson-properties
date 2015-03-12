@@ -4,27 +4,37 @@ var clone = require('clone'),
   testData = require('./testdata.js');
 describe('extendGeojson',function() {
   var extGeoJSON = require('../index.js');
-  it('including propertyMap',function() {
+  it('extend array of features while including propertyMap in joinMap',function() {
     debugger;
-    var geojsons = clone(testData.geojsons)
+    var features = clone(testData.geojson.features)
     extGeoJSON(
-      geojsons,
+      features,
       testData.joinDataSet,
       testData.joinMap);
-    expect(geojsons).to.be.deep.equal(
+    expect(features).to.be.deep.equal(
       testData.extendedGeojsons);
   });
-  it('without propertyMap',function() {
+  it('extend array of features without propertyMap in joinMap',function() {
     var joinMap2 = {
       geoKey: testData.joinMap.geoKey,
       dataKey: testData.joinMap.dataKey
     };
-    var geojsons2 = clone(testData.geojsons);
+    var features2 = clone(testData.geojson.features);
     extGeoJSON(
-      geojsons2,
+      features2,
       testData.joinDataSet,
       joinMap2);
-    expect(geojsons2).to.be.deep.equal(
+    expect(features2).to.be.deep.equal(
       testData.extendedGeojsonsWithoutPropMap);
+  });
+  it('extend FeatureCollection while including propertyMap in joinMap',function() {
+    debugger;
+    var featColl = clone(testData.geojson)
+    extGeoJSON(
+      featColl,
+      testData.joinDataSet,
+      testData.joinMap);
+    expect(featColl.features).to.be.deep.equal(
+      testData.extendedGeojsons);
   });
 });

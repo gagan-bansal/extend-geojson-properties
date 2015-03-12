@@ -1,5 +1,5 @@
 # extend-geojson-properties
-Extend properties of geojson objects from separate dataset of jsons.
+Extend properties of geojson (array of features or FeatureCollection) from separate dataset of jsons.
 
 ## Installation 
 For node.js or with browserify
@@ -19,7 +19,7 @@ This module return a function or create global function named **extendGeoJSON** 
 var extendGeoJSON = require('extend-geojson-properties');
 extentGeoJSON( geojsons, dataSet, joinMap);
 ```
-* **geojsons** array of features
+* **geojsons** array of features of FeatureCollection
 * **dataSet** array of json objects from which properties need to be picked
 * **joinMap** joining rules
 
