@@ -15,32 +15,35 @@
           dataProperty: 'attr3.count'}
       ]
     },
-    geojsons: [
-      {
-        type:'Feature',
-        id: 'id1',
-        geometry: {type: 'Point', coordinates: [34,50]},
-        properties: {
-          name: 'name1'
+    geojson: {
+      type: "FeatureCollection",
+      features: [
+        {
+          type:'Feature',
+          id: 'id1',
+          geometry: {type: 'Point', coordinates: [34,50]},
+          properties: {
+            name: 'name1'
+          }
+        },
+        {
+          type:'Feature',
+          id: 'id3',
+          geometry: {type: 'Point', coordinates: [10,35]},
+          properties: {
+            name: 'name3'
+          }
+        },
+        {
+          type:'Feature',
+          id: 'id2',
+          geometry: {type: 'Point', coordinates: [-30,-50]},
+          properties: {
+            name: 'name2'
+          }
         }
-      },
-      {
-        type:'Feature',
-        id: 'id3',
-        geometry: {type: 'Point', coordinates: [10,35]},
-        properties: {
-          name: 'name3'
-        }
-      },
-      {
-        type:'Feature',
-        id: 'id2',
-        geometry: {type: 'Point', coordinates: [-30,-50]},
-        properties: {
-          name: 'name2'
-        }
-      }
-    ],
+      ]
+    },
     joinDataSet: [
       {
         attr1: 'name1',

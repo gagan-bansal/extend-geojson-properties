@@ -1,9 +1,22 @@
 //extend-geojson-properties
 (function() {
-  var extendGeoJSON = function(geojsons,jsonDataSet,jsonMap) {
-    if( !Array.isArray(geojsons) || !Array.isArray(jsonDataSet)) return false;
+  var extendGeoJSON = function(featColl,jsonDataSet,jsonMap) {
+    // check the valid input parameters
+    var collection;
+    if (Array.isArray(jsonDataSet)) {
+      if (Array.isArray(featColl) ) {
+        collection = featColl; 
+      } else if ((featColl.hasOwnProperty('type') 
+        & featColl.type == 'FeatureCollection')) {
+        collection = featColl.features;
+      }else {
+        return false;
+      }
+    }else {
+      return false;
+    }
     var geoFeatIndex = {};
-    geojsons.forEach(function(f) {
+    collection.forEach(function(f) {
       geoFeatIndex[valueAt(f,jsonMap.geoKey)] = f;
     });
     jsonDataSet.forEach(function(data) {
